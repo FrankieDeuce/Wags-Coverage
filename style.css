@@ -40,8 +40,24 @@ p {
     text-align: center;
 }
 
+.day:hover {
+    background-color: #eee; /* Change this to the color you want when hovering */
+}
+
+
+.weekend {
+    background: #ffcccc; /* Change this to the color you want for the weekend */
+}
+
 .day span {
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* New CSS for responsiveness */
+@media screen and (max-width: 768px) {
+    #calendar {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
