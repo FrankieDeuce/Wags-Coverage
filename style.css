@@ -139,4 +139,13 @@ h2 {
     #calendar {
         grid-template-columns: 1fr;
     }
+    .mobile-QR {
+        /*put in the center of the screen, not the right side*/
+        margin-top: 20px;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        display: block;
+        margin-top: 5en;
+    }
 }
