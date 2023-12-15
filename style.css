@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #d4d4d4;
     color: #333;
     line-height: 1.6;
 }
@@ -18,6 +18,13 @@ main {
     padding: 20px;
 }
 
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 h1 {
     margin: 0;
 }
@@ -26,38 +33,110 @@ p {
     font-size: 1.1rem;
 }
 
+.dark-background {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.qr-code {
+    flex: 0 0 200px;
+}
+
+.mobile-QR {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
 #calendar {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    color: #00000000
+}
+
+
+#message {
+    text-align: center;
+    background: #333;
+    color: #9e6b6b;
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 .day {
-    background: #fff;
+    background: #aac9ae;
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
+    color: #000000;
+}
+
+.date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.time {
+    color: #000000;
 }
 
 .day:hover {
-    background-color: #eee; /* Change this to the color you want when hovering */
+    background-color: #87a18a;
 }
-
 
 .weekend {
-    background: #ffcccc; /* Change this to the color you want for the weekend */
+    background: #ffcccc;
 }
 
-.day span {
+.date {
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* New CSS for responsiveness */
+.shift {
+    background-color: #333;
+    color: #000000;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .dark-background {
+        order: 1;
+        margin-right: 0;
+    }
+
+    .qr-code {
+        display: none;
+    }
+    .mobile-QR {
+        order: 1;
+        margin-top: 10px;
+        flex: 1;
+    }
     #calendar {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns for mobile */
+    }
+}
+@media screen and (max-width: 480px) {
+    #calendar {
+        grid-template-columns: 1fr;
     }
 }

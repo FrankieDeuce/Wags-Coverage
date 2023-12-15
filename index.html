@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coverage Availability</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 <body>
     <header>
         <h1>Available SFL/CSA Coverage Schedule</h1>
     </header>
     <main>
-        <p>Frank is here to help with getting your store SFL/CSA coverage. Below is the list of availability that he can cover. You can return to this Paige, at any time to view an updated availability. Visit wagscoverage.com or scan the QR code.</p>
-        <div id="calendar"></div>
+            <div class="container">
+                <div class="description">
+                    <p>Frank is here to assist with your store's coverage needs. The schedule below lists Frank's available times for coverage.</p>
+                    <p>This page is regularly updated with new availability, so feel free to check back at any time.</p>
+                    <p>For easy access, bookmark wagscoverage.com or scan the provided QR code.</p>
+                </div>
+                <div class="qr-code">
+                    <img src="qrCode.png" alt="QR Code" width="100%">
+                </div>
+            </div>
+            <div class="dark-background">
+                <h2>Available Shifts</h2>
+                <p id="message"></p>
+                <div id="calendar"></div>
+            </div>
+            <div class="mobile-QR">
+                <img src="qrCode.png" alt="QR Code" width="100%">
+            </div>
     </main>
     <script src="script.js"></script>
 </body>
